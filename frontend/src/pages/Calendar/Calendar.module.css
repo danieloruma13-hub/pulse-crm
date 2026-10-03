@@ -1,0 +1,285 @@
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  font-size: 0.85rem;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 16px;
+}
+
+.calendarCard {
+  background: rgba(18, 22, 40, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.calendarHeader h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.calendarHeader button {
+  color: #94a3b8;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.calendarHeader button:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.weekdayRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 6px;
+}
+
+.weekdayRow span {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.emptyCell {
+  aspect-ratio: 1;
+}
+
+.dayCell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 10px;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  transition: background 0.15s ease;
+}
+
+.dayCell:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.dayToday span {
+  color: #a5b4fc;
+  font-weight: 700;
+}
+
+.daySelected {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+}
+
+.daySelected span {
+  color: white;
+}
+
+.dayDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #4ade80;
+}
+
+.daySelected .dayDot {
+  background: white;
+}
+
+.dayPanel {
+  background: rgba(18, 22, 40, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.dayPanel h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.empty {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.eventItem {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.eventBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.eventTitle {
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+}
+
+.eventMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.deleteBtn {
+  color: #64748b;
+  padding: 4px;
+  height: fit-content;
+  border-radius: 6px;
+}
+
+.deleteBtn:hover {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 9, 20, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(19, 24, 38, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalHeader h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.modalHeader button {
+  color: #94a3b8;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

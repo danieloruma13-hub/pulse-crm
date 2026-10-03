@@ -1,0 +1,469 @@
+.topbar {
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menuButton {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #8d97b1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.menuButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+  width: min(430px, 45%);
+
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  background: #0d1423;
+
+  color: #66718c;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.search:focus-within {
+  border-color: rgba(105, 119, 255, 0.45);
+
+  background: #0f1729;
+}
+
+.search input {
+  min-width: 0;
+  flex: 1;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #e8ebf4;
+
+  font-size: 11px;
+}
+
+.search input::placeholder {
+  color: #66718c;
+}
+
+.shortcut {
+  color: #56617b;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* =========================
+   AI BUTTON
+========================= */
+
+.aiButton {
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 15px;
+
+  border: 1px solid rgba(120, 129, 255, 0.55);
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(83, 94, 180, 0.12),
+      rgba(63, 81, 145, 0.05)
+    );
+
+  color: #e5e8ff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.aiButton svg {
+  color: #8e82ff;
+}
+
+.aiButton:hover {
+  border-color: rgba(120, 129, 255, 0.8);
+
+  background:
+    rgba(104, 91, 255, 0.12);
+}
+
+
+/* =========================
+   ICON BUTTON
+========================= */
+
+.iconButton {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #8993ad;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.iconButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   NOTIFICATION
+========================= */
+
+.notificationBadge {
+  position: absolute;
+
+  top: 3px;
+  right: 3px;
+
+  min-width: 15px;
+  height: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 4px;
+
+  border-radius: 10px;
+
+  background: #4c8cff;
+
+  color: white;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  border: 2px solid #080e1b;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profileButton {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 4px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #7d87a0;
+
+  cursor: pointer;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4d5872,
+      #171d2d
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .topbar {
+    gap: 10px;
+  }
+
+  .search {
+    width: 300px;
+  }
+
+  .aiButton span {
+    display: none;
+  }
+
+  .aiButton {
+    width: 38px;
+
+    padding: 0;
+
+    justify-content: center;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .topbar {
+    min-height: 52px;
+
+    padding-left: 48px;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .search {
+    flex: 1;
+
+    width: auto;
+
+    height: 36px;
+  }
+
+  .shortcut {
+    display: none;
+  }
+
+  .actions {
+    gap: 2px;
+  }
+
+  .aiButton,
+  .profileButton {
+    display: none;
+  }
+
+  .iconButton {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+  .search {
+    max-width: 190px;
+  }
+
+  .search input {
+    font-size: 10px;
+  }
+
+  .actions {
+    margin-left: 0;
+  }
+}
+.notifWrap {
+  position: relative;
+}
+
+.notifBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: transparent;
+}
+
+.notifPanel {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 51;
+  width: min(90vw, 340px);
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(19, 24, 38, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.notifHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.markAllBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: #a5b4fc;
+  font-weight: 600;
+}
+
+.notifError {
+  color: #fca5a5;
+  font-size: 0.78rem;
+  margin-bottom: 8px;
+}
+
+.notifList {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notifEmpty {
+  color: #94a3b8;
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.notifItem {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-left: 2px solid transparent;
+}
+
+.notifUnread {
+  border-left-color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.notifTitle {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.notifMessage {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.notifTime {
+  font-size: 0.7rem;
+  color: #64748b;
+}

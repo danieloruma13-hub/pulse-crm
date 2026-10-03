@@ -1,0 +1,68 @@
+.stage {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+.chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface-glass-strong);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  animation: drift 8s ease-in-out infinite;
+}
+
+.chipTopRight {
+  top: 8%;
+  right: -4%;
+  animation-delay: -2s;
+}
+
+.chipBottomLeft {
+  bottom: 12%;
+  left: -6%;
+  animation-delay: -4s;
+}
+
+.chipBottomRight {
+  bottom: 4%;
+  right: 6%;
+  animation-delay: -1s;
+}
+
+.chipValue {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.chipLabel {
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 640px) {
+  .chip {
+    display: none;
+  }
+}

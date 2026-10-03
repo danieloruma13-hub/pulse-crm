@@ -1,0 +1,271 @@
+/* =========================================================
+   DASHBOARD SHELL
+========================================================= */
+
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 310px;
+
+  background:
+    radial-gradient(circle at 55% 0%, rgba(59, 92, 190, 0.08), transparent 35%),
+    #050914;
+
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+  min-width: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.statsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+
+/* =========================================================
+   ANALYTICS
+========================================================= */
+
+.analytics {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 1fr);
+  gap: 12px;
+  min-width: 0;
+}
+
+.analytics > * {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   LOWER GRID
+========================================================= */
+
+.lowerGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.lowerGrid > * {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   RIGHT PANEL
+========================================================= */
+
+.rightPanel {
+  min-width: 0;
+  padding: 16px 16px 16px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: #050914;
+}
+
+
+/* =========================================================
+   PIPELINE
+========================================================= */
+
+.pipelineSection {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1440px) {
+  .dashboard {
+    grid-template-columns: 220px minmax(0, 1fr) 320px;
+  }
+
+  .main {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .rightPanel {
+    padding: 18px 18px 18px 0;
+  }
+
+  .statsGrid {
+    gap: 10px;
+  }
+
+  .analytics,
+  .lowerGrid {
+    gap: 12px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (max-width: 1279px) and (min-width: 1001px) {
+  .dashboard {
+    grid-template-columns: 205px minmax(0, 1fr);
+  }
+
+  .rightPanel {
+    display: none;
+  }
+
+  .main {
+    padding: 14px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .analytics {
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+  }
+
+  .lowerGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) and (min-width: 701px) {
+  .dashboard {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .rightPanel {
+    display: none;
+  }
+
+  .main {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analytics {
+    grid-template-columns: 1fr;
+  }
+
+  .lowerGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .dashboard {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .main {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    padding-bottom: 30px;
+    gap: 10px;
+  }
+
+  .rightPanel {
+    display: none;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .analytics {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .lowerGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+  .main {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+  }
+
+  .analytics,
+  .lowerGrid {
+    gap: 8px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+  .main {
+    padding: 7px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

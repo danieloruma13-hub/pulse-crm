@@ -1,0 +1,257 @@
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  font-size: 0.85rem;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.empty {
+  padding: 48px 16px;
+  text-align: center;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: rgba(18, 22, 40, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cardTop h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.subject {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badgeDraft {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+}
+
+.badgeSent {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+.meta {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.recipients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.recipientChip {
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  color: #cbd5e1;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.sendBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 0.82rem;
+}
+
+.sendBtn:disabled {
+  opacity: 0.5;
+}
+
+.deleteBtn {
+  padding: 9px 12px;
+  color: #64748b;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.deleteBtn:hover {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 9, 20, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(19, 24, 38, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalHeader h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.modalHeader button {
+  color: #94a3b8;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.recipientPicker {
+  max-height: 180px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.noContacts {
+  padding: 12px;
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+.recipientRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #f8fafc;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.recipientRow:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.recipientEmail {
+  margin-left: auto;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 0.88rem;
+}

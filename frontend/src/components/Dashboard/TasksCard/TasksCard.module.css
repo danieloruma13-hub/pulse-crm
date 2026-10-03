@@ -1,0 +1,141 @@
+.card{
+
+    background:#0f1525;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:22px;
+
+    padding:24px;
+
+}
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+}
+
+.header h2{
+
+    margin:0;
+
+    font-size:22px;
+
+}
+
+.header p{
+
+    margin-top:6px;
+
+    color:#8e97b7;
+
+    font-size:14px;
+
+}
+
+.addButton{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#171f33;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.addButton:hover{
+
+    background:#6d5cff;
+
+}
+
+.tasks{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.task{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.03);
+
+    transition:.25s;
+
+}
+
+.task:hover{
+
+    background:rgba(109,92,255,.08);
+
+}
+
+.checkbox{
+
+    color:#49d97c;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.task span{
+
+    font-size:15px;
+
+}
+
+.completed{
+
+    color:#7d86a7;
+
+    text-decoration:line-through;
+
+}
+
+@media(max-width:900px){
+
+.card{
+
+margin-top:18px;
+
+}
+
+}
