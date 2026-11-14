@@ -1,5 +1,4 @@
 const express = require('express');
-app.set('trust proxy', 1);
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -10,6 +9,7 @@ const { clientUrl, nodeEnv } = require('./config/env');
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
+app.set('trust proxy', 1);
 
 app.use(helmet());
 app.use(cors({ origin: clientUrl, credentials: true }));
